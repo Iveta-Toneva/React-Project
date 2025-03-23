@@ -1,5 +1,5 @@
 import { useParams } from "react-router"
-import { useCaricature } from "../../../api/caricaturesApi";
+import { useCaricature } from './.././../api/caricaturesApi'
 
 export function Caricature() {
 

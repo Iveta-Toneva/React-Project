@@ -1,13 +1,15 @@
 import { useContext, useState } from "react"
 import './Login.css'
-import { useLogin } from "../../../api/authApi";
-import { UserContext } from "../../../contexts/UserContext";
+import { useLogin } from "../../api/authApi";
+import { UserContext } from "../../contexts/UserContext";
+import { useNavigate } from "react-router";
 
 
 export function Login() {
 
     const { login } = useLogin();
     const { loginHandler } = useContext(UserContext);
+    const navigate = useNavigate();
     const [values, setValues] = useState({
         email: '',
         password: '',
@@ -50,6 +52,8 @@ export function Login() {
 
         const response = await login(values);
         loginHandler(response);
+
+        navigate('/');
 
     }
 

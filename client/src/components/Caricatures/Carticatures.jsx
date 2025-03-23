@@ -1,4 +1,4 @@
-import { useCaricatures } from "../../../api/caricaturesApi";
+import { useCaricatures } from "../../api/caricaturesApi";
 import { CaricatureItem } from "./CaricatureItem/CaricatureItem";
 
 export function Caricatures() {

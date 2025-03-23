@@ -1,4 +1,4 @@
-import { useOrders } from "../../../api/ordersApi"
+import { useOrders } from "../../api/ordersApi";
 import { OrderItem } from "./OrderItem/OrderItem";
 import './Orders.css'
 

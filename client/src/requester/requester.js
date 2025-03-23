@@ -1,14 +1,17 @@
 export const request = (method, url, data, token) => {
 
+    if (url.includes('logout')) {
+        return fetch(url, {
+            method,
+            headers: {
+                'X-Authorization': token
+            }
+        })
+    }
+
     if (method === 'GET') {
         return fetch(url)
-            .then(res => {
-                if (res.status === 204) {
-                    return;
-                } else {
-                    return res.json();
-                }
-            });
+            .then(res => res.json());
     }
 
     if (data && !token) {

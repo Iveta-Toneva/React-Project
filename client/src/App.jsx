@@ -8,8 +8,9 @@ import { Caricature } from './components/Caricature/Caricature'
 import { Orders } from './components/Orders/Orders'
 import { Register } from './components/Register/Register'
 import { Login } from './components/Login/Login'
-import { UserContext } from '../contexts/UserContext'
+import { UserContext } from './contexts/UserContext'
 import { useState } from 'react'
+import { Logout } from './components/Logout/Logout'
 
 function App() {
 
@@ -19,9 +20,13 @@ function App() {
     setAuthData(data)
   }
 
+  const logoutHandler = () => {
+    setAuthData({});
+  }
+
   return (
 
-    <UserContext.Provider value={{ ...authData, loginHandler }}>
+    <UserContext.Provider value={{ ...authData, loginHandler, logoutHandler }}>
       <div >
         <Navigation />
         <div className="min-h-screen flex flex-col items-center">
@@ -32,6 +37,7 @@ function App() {
             <Route path='/orders' element={<Orders />} />
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/logout' element={<Logout />} />
           </Routes>
         </div >
 

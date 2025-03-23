@@ -1,12 +1,14 @@
 import { useContext, useState } from "react"
 import './Register.css'
-import { useRegister } from "../../../api/authApi";
-import { UserContext } from "../../../contexts/UserContext";
+import { useRegister } from "../../api/authApi";
+import { UserContext } from "../../contexts/UserContext";
+import { useNavigate } from "react-router";
 
 export function Register() {
 
     const { register } = useRegister();
     const { loginHandler } = useContext(UserContext);
+    const navigate = useNavigate();
 
     const [values, setValues] = useState({
         email: '',
@@ -73,6 +75,7 @@ export function Register() {
         const { email, accessToken, username, _id } = response;
 
         loginHandler({ email, accessToken, username, _id });
+        navigate('/');
 
     }
 
