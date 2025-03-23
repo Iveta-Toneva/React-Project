@@ -4,6 +4,7 @@ import { Footer } from './components/Footer/Footer'
 import { Route, Routes } from 'react-router'
 import { Home } from './components/Home/Home'
 import { Caricatures } from './components/Caricatures/Carticatures'
+import { Caricature } from './components/Caricature/Caricature'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path='/caricatures' element={<Caricatures />} />
+            <Route path='/details/:id' element={<Caricature />} />
           </Routes>
         </div >
 

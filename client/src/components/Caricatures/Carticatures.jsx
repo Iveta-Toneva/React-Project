@@ -1,13 +1,9 @@
-import { useState, useEffect } from "react"
+import { useCaricatures } from "../../../api/caricaturesApi";
 import { CaricatureItem } from "../CaricatureItem/CaricatureItem";
-export function Caricatures() {
-    const [caricatures, setCaricatures] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:3030/data/caricatures')
-            .then(res => res.json())
-            .then(caricatures => setCaricatures(caricatures));
-    }, [])
 
+export function Caricatures() {
+
+    const { caricatures } = useCaricatures();
 
     return (
 
@@ -15,4 +11,5 @@ export function Caricatures() {
             {caricatures.map(caricature => <CaricatureItem key={caricature._id} item={caricature} />)}
         </div >
     )
+
 }

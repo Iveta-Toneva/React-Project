@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router'
 export function CaricatureItem(
     { item }
 ) {
@@ -11,12 +11,9 @@ export function CaricatureItem(
                 <div className="mt-3 text-xl text-gray-600">Likes: {item.likes}</div>
             </div>
             <div className="flex justify-between p-4 space-x-4">
-                <button className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-200 transform hover:scale-105 cursor-pointer">
-                    Like
-                </button>
-                <button className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-200 transform hover:scale-105 cursor-pointer">
+                <Link to={`/details/${item._id}`} className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-200 transform hover:scale-105 cursor-pointer">
                     Details
-                </button>
+                </Link>
             </div>
         </div>
     )
