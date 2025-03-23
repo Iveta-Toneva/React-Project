@@ -11,22 +11,26 @@ export const request = (method, url, data, token) => {
             });
     }
 
-    if (data) {
+    if (data && !token) {
+
         return fetch(url, {
             method,
             headers: {
                 'Content-Type': 'application/json',
-                'X-Authorization': token
             },
             body: JSON.stringify(data)
         })
-    } else {
+            .then(res => res.json());
+
+    } else if (!data && token) {
+
         return fetch(url, {
             method,
             headers: {
                 'X-Authorization': token
             },
         })
+            .then(res => res.json());
     }
 
 

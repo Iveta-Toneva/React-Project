@@ -1548,7 +1548,7 @@
         "customCaricatures": {
             "1": {
                 "img": "https://i.etsystatic.com/26137426/r/il/787988/2758932669/il_1588xN.2758932669_5i5q.jpg",
-                "description": "This is the photo that i want i will send a picture of my dog! I want to make my dog like this superhero.Thank you and i will wait for your response.",
+                "description": "I’m interested in commissioning a caricature of my dog, and I’d love to have him portrayed as a superhero! He’s got so much energy and a playful spirit, and I think he’d look amazing with a superhero cape and costume.I’m imagining something dynamic and fun, where he’s striking a powerful pose—perhaps even flying or standing heroically. Thanks so much, I’m excited to see the result!",
                 "title": "Custom dog superhero",
                 "username": "Peter",
                 "_id": "1",
@@ -1557,12 +1557,21 @@
             },
             "2": {
                 "img": "https://i.etsystatic.com/26137426/r/il/2d60ea/3160061595/il_600x600.3160061595_p597.jpg",
-                "description": "I want this type of photo. I will send you a picture of me and my girlfriend. It will be the perfect gift for her.",
+                "description": "Hello!I’d like to commission a special caricature for my girlfriend and me.We’d love to have it as a unique piece of art to hang on our wall.The style should be playful and fun, but also reflect the connection we share.I’m thinking of something that showcases us as a couple, maybe in a fun, romantic, or whimsical scene that represents us—whether it’s something personal to us or just a cute and lighthearted concept.",
                 "title": "Couple photo",
                 "username": "Ivan",
                 "_id": "2",
                 "_ownerId": "1",
                 "_createdOn": 1733682272334
+            },
+            "3": {
+                "img": "https://i.etsystatic.com/26137426/r/il/d47915/6589572031/il_1588xN.6589572031_oojq.jpg",
+                "description": "Hi there! I’d like to commission a caricature for my girlfriend.She’s really into fitness and loves taking selfies.I’d love for the caricature to reflect her passion for staying fit, perhaps with her in a fun workout pose, and maybe even holding a phone like she’s snapping a selfie.I want it to be playful and lighthearted but also capture her energy and personality.She’s a strong and vibrant person, so I’d love the artwork to reflect that vibe.",
+                "title": "Fitness girl",
+                "username": "Ivan",
+                "_id": "3",
+                "_ownerId": "1",
+                "_createdOn": 1733682272344
             }
         },
         movies: {

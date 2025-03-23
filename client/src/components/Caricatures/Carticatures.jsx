@@ -1,5 +1,5 @@
 import { useCaricatures } from "../../../api/caricaturesApi";
-import { CaricatureItem } from "../CaricatureItem/CaricatureItem";
+import { CaricatureItem } from "./CaricatureItem/CaricatureItem";
 
 export function Caricatures() {
 

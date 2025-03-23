@@ -18,7 +18,7 @@ export function Navigation() {
                 </div>
 
                 <div className="relative group">
-                    <Link className="text-gray-800 font-semibold text-lg hover:text-blue-500 transition duration-300 cursor-pointer">
+                    <Link to={'/orders'} className="text-gray-800 font-semibold text-lg hover:text-blue-500 transition duration-300 cursor-pointer">
                         Custom Orders
                     </Link>
                     <div className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 scale-x-0 transition-all duration-300 group-hover:scale-x-100"></div>
@@ -39,7 +39,7 @@ export function Navigation() {
                 </div>
 
                 <div className="relative group">
-                    <Link className="text-gray-800 font-semibold text-lg hover:text-blue-500 transition duration-300 cursor-pointer">
+                    <Link to={'/login'} className="text-gray-800 font-semibold text-lg hover:text-blue-500 transition duration-300 cursor-pointer">
                         Login
                     </Link>
                     <div className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 scale-x-0 transition-all duration-300 group-hover:scale-x-100"></div>
@@ -53,7 +53,7 @@ export function Navigation() {
                 </div>
 
                 <div className="relative group">
-                    <Link className="text-gray-800 font-semibold text-lg hover:text-blue-500 transition duration-300 cursor-pointer">
+                    <Link to={'/register'} className="text-gray-800 font-semibold text-lg hover:text-blue-500 transition duration-300 cursor-pointer">
                         Register
                     </Link>
                     <div className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 scale-x-0 transition-all duration-300 group-hover:scale-x-100"></div>
