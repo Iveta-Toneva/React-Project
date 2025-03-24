@@ -8,25 +8,15 @@ import { Caricature } from './components/Caricature/Caricature'
 import { Orders } from './components/Orders/Orders'
 import { Register } from './components/Register/Register'
 import { Login } from './components/Login/Login'
-import { UserContext } from './contexts/UserContext'
 import { Logout } from './components/Logout/Logout'
-import { usePersistedState } from './hooks/usePersistedState'
+import { UserProvider } from './providers/UserProvider'
 
 function App() {
 
-  const [authData, setAuthData] = usePersistedState({});
-
-  const loginHandler = (data) => {
-    setAuthData(data)
-  }
-
-  const logoutHandler = () => {
-    setAuthData({});
-  }
 
   return (
 
-    <UserContext.Provider value={{ ...authData, loginHandler, logoutHandler }}>
+    <UserProvider>
       <div >
         <Navigation />
         <div className="min-h-screen flex flex-col items-center">
@@ -43,7 +33,8 @@ function App() {
 
       </div>
       <Footer />
-    </UserContext.Provider >
+    </UserProvider>
+
 
   )
 }
