@@ -9,12 +9,12 @@ import { Orders } from './components/Orders/Orders'
 import { Register } from './components/Register/Register'
 import { Login } from './components/Login/Login'
 import { UserContext } from './contexts/UserContext'
-import { useState } from 'react'
 import { Logout } from './components/Logout/Logout'
+import { usePersistedState } from './hooks/usePersistedState'
 
 function App() {
 
-  const [authData, setAuthData] = useState({});
+  const [authData, setAuthData] = usePersistedState({});
 
   const loginHandler = (data) => {
     setAuthData(data)
