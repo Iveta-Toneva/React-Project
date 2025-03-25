@@ -10,6 +10,8 @@ import { Register } from './components/Register/Register'
 import { Login } from './components/Login/Login'
 import { Logout } from './components/Logout/Logout'
 import { UserProvider } from './providers/UserProvider'
+import { EditOrder } from './components/EditOrder/EditOrder'
+import { CreateOrder } from './components/CreateOrder/CreateOrder'
 
 function App() {
 
@@ -28,6 +30,8 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
             <Route path='/logout' element={<Logout />} />
+            <Route path='/edit/:id' element={<EditOrder />} />
+            <Route path='/createOrder' element={<CreateOrder />} />
           </Routes>
         </div >
 

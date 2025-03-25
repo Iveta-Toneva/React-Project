@@ -34,6 +34,16 @@ export const request = (method, url, data, token) => {
             },
         })
             .then(res => res.json());
+    } else if (data && token) {
+        return fetch(url, {
+            method,
+            headers: {
+                'X-Authorization': token,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json());
     }
 
 

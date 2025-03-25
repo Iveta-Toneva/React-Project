@@ -14,3 +14,25 @@ export const useOrders = () => {
 
     return { orders };
 }
+
+export const useOrder = (id) => {
+
+    const [order, setOrder] = useState({});
+
+    useEffect(() => {
+        request('GET', `${baseUrl}${id}`)
+            .then(setOrder);
+    });
+
+    return { order };
+
+}
+
+export const useCreateOrder = () => {
+
+    const create =  (data, token) => {
+        return  request('POST', baseUrl, data, token)
+    }
+
+    return { create }
+}
