@@ -6,7 +6,7 @@ import { Link } from "react-router";
 export function OrderItem({
     order
 }) {
-    const { _id } = useContext(UserContext);
+    const { _id, username } = useContext(UserContext);
 
 
     return (
