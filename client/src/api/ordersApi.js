@@ -20,9 +20,9 @@ export const useOrder = (id) => {
     const [order, setOrder] = useState({});
 
     useEffect(() => {
-        request('GET', `${baseUrl}${id}`)
+        request('GET', `${baseUrl}/${id}`)
             .then(setOrder);
-    });
+    }, []);
 
     return { order };
 
@@ -30,9 +30,18 @@ export const useOrder = (id) => {
 
 export const useCreateOrder = () => {
 
-    const create =  (data, token) => {
-        return  request('POST', baseUrl, data, token)
+    const create = (data, token) => {
+        return request('POST', baseUrl, data, token)
     }
 
     return { create }
+}
+
+
+export const useEditOrder = () => {
+    const edit = (data, token, id) => {
+        return request('PUT', `${baseUrl}/${id}`, data, token)
+    }
+
+    return { edit }
 }
