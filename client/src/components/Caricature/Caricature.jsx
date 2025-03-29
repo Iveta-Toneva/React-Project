@@ -1,11 +1,12 @@
-import { useParams } from "react-router"
+import {  useParams } from "react-router"
 import { useCaricature } from './.././../api/caricaturesApi'
 
 export function Caricature() {
 
     const { id } = useParams();
+    
     const { caricature } = useCaricature(id);
-
+    
 
     return (
         <>
@@ -22,11 +23,6 @@ export function Caricature() {
 
                 <div className="text-base text-gray-700 mb-3">{caricature.description}</div>
 
-                <div className="text-lg font-semibold text-gray-900 mb-3">Likes: {caricature.likes}</div>
-
-                <button className="w-full md:w-auto px-6 py-2 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-200 transform hover:scale-105 cursor-pointer shadow-md hover:shadow-lg focus:outline-none">
-                    Like
-                </button>
             </div>
         </>
 

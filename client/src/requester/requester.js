@@ -9,6 +9,16 @@ export const request = (method, url, data, token) => {
         })
     }
 
+    if (method === 'GET' && token) {
+        return fetch(url, {
+            method,
+            headers: {
+                'X-Authorization': token
+            }
+        })
+            .then(res => res.json());
+    }
+
     if (method === 'GET') {
         return fetch(url)
             .then(res => res.json());

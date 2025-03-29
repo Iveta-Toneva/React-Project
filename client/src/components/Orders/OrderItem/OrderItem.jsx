@@ -42,9 +42,9 @@ export function OrderItem({
                 </Link>
 
 
-                <button className="px-8 py-4 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition duration-200 transform hover:scale-105 cursor-pointer">
+                <Link to={`/delete/${order._id}`} className="px-8 py-4 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition duration-200 transform hover:scale-105 cursor-pointer">
                     Delete
-                </button>
+                </Link>
             </div>}
 
         </div>

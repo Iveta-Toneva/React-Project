@@ -12,6 +12,11 @@ import { Logout } from './components/Logout/Logout'
 import { UserProvider } from './providers/UserProvider'
 import { EditOrder } from './components/EditOrder/EditOrder'
 import { CreateOrder } from './components/CreateOrder/CreateOrder'
+import { DeleteOrder } from './components/DeleteOrder/DeleteOrder'
+import { Profile } from './components/Profile/Profile'
+import { AuthGuard } from './guards/AuthGuard'
+import { GuestGuard } from './guards/GuestGuard'
+
 
 function App() {
 
@@ -27,11 +32,17 @@ function App() {
             <Route path='/caricatures' element={<Caricatures />} />
             <Route path='/details/:id' element={<Caricature />} />
             <Route path='/orders' element={<Orders />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/logout' element={<Logout />} />
-            <Route path='/edit/:id' element={<EditOrder />} />
-            <Route path='/createOrder' element={<CreateOrder />} />
+            <Route element={<AuthGuard />}>
+              <Route path='/logout' element={<Logout />} />
+              <Route path='/createOrder' element={<CreateOrder />} />
+              <Route path='/profile' element={<Profile />} />
+              <Route path='/edit/:id' element={<EditOrder />} />
+              <Route path='/delete/:id' element={<DeleteOrder />} />
+            </Route>
+            <Route element={<GuestGuard />}>
+              <Route path='/register' element={<Register />} />
+              <Route path='/login' element={<Login />} />
+            </Route>
           </Routes>
         </div >
 

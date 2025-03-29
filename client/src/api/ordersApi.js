@@ -45,3 +45,22 @@ export const useEditOrder = () => {
 
     return { edit }
 }
+
+export const useDeleteOrder = (token, id) => {
+
+
+    const error = null;
+
+    useEffect(() => {
+        request('DELETE', `${baseUrl}/${id}`, null, token)
+            .then(() => {
+
+            })
+            .catch((err) => {
+                error = err;
+            });
+    }, [])
+
+    return { error };
+}
+
