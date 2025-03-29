@@ -10,13 +10,15 @@ export function CreateOrder() {
     const [values, setValues] = useState({
         title: '',
         description: '',
-        img: ''
+        img: '',
+        username: ''
     });
 
     const [errors, setErrors] = useState({
         title: '',
         description: '',
-        img: ''
+        img: '',
+        username: ''
     });
 
     const { accessToken } = useContext(UserContext);
@@ -32,14 +34,16 @@ export function CreateOrder() {
             newErrors.title = "Title is required.";
         }
 
-
         if (!values.description) {
             newErrors.description = "Description is required.";
         }
 
-
         if (!values.img) {
             newErrors.img = "Image is required.";
+        }
+
+        if (!values.username) {
+            newErrors.username = "Username is required.";
         }
 
         return newErrors;
@@ -108,6 +112,21 @@ export function CreateOrder() {
                     onChange={onChangeHandler}
                 />
                 {errors.img && <p className="text-red-500 text-sm mt-1">{errors.img}</p>}
+
+            </div>
+
+
+            <div>
+                <label htmlFor="username" className="block text-lg font-medium text-gray-700">Username:</label>
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    className="mt-2 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    placeholder="Enter your username"
+                    onChange={onChangeHandler}
+                />
+                {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username}</p>}
 
             </div>
 
