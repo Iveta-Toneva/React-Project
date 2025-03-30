@@ -7,7 +7,7 @@ export function DeleteOrder() {
 
     const { id } = useParams();
     const { accessToken } = useContext(UserContext);;
-    const { error } = useDeleteOrder(accessToken, id);
+    const { error, isDeleted } = useDeleteOrder(accessToken, id);
 
     if (error) {
 
@@ -18,7 +18,7 @@ export function DeleteOrder() {
         )
     }
 
-    return (
-        <Navigate to={'/orders'} />
-    )
+    if (isDeleted) {
+        return <Navigate to={'/orders'} />
+    }
 }
