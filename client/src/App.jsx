@@ -16,6 +16,7 @@ import { DeleteOrder } from './components/DeleteOrder/DeleteOrder'
 import { Profile } from './components/Profile/Profile'
 import { AuthGuard } from './guards/AuthGuard'
 import { GuestGuard } from './guards/GuestGuard'
+import { Error } from './components/Error/Error'
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
               <Route path='/register' element={<Register />} />
               <Route path='/login' element={<Login />} />
             </Route>
+            <Route path='*' element={<Error />} />
           </Routes>
         </div >
 
