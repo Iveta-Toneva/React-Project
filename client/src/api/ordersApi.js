@@ -49,18 +49,19 @@ export const useEditOrder = () => {
 export const useDeleteOrder = (token, id) => {
 
 
-    const error = null;
+    const [error, setError] = useState(null);
+    const [isDeleted, setIsDeleted] = useState(false);
 
     useEffect(() => {
         request('DELETE', `${baseUrl}/${id}`, null, token)
             .then(() => {
-
+                setIsDeleted(true);
             })
             .catch((err) => {
-                error = err;
+                setError(err);
             });
     }, [])
 
-    return { error };
+    return { error, isDeleted };
 }
 
