@@ -6,7 +6,7 @@ import { UserContext } from "../../contexts/UserContext";
 export function DeleteOrder() {
 
     const { id } = useParams();
-    const { accessToken } = useContext(UserContext);;
+    const { accessToken } = useContext(UserContext);
     const { error, isDeleted } = useDeleteOrder(accessToken, id);
 
     if (error) {

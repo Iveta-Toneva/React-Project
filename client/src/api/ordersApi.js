@@ -51,7 +51,7 @@ export const useDeleteOrder = (token, id) => {
 
     const [error, setError] = useState(null);
     const [isDeleted, setIsDeleted] = useState(false);
-
+ 
     useEffect(() => {
         request('DELETE', `${baseUrl}/${id}`, null, token)
             .then(() => {
