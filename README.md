@@ -5,10 +5,12 @@ This project was generated using React and Softuni-Practice server for the backe
 # How to Run 
 
 To start a local development server go to the client folder, open the terminal and run :
+
 ```
 npm install
 npm run dev
 ```
+
  Once the server is running, open your browser and navigate to http://localhost:5173/
 
 
