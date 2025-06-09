@@ -10,5 +10,6 @@ export const useProfile = (token) => {
     },[])
 
     return { user };
+    
 }   
 
